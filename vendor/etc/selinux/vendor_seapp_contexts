@@ -1,0 +1,10 @@
+user=_app seinfo=platform name=com.trustonic.tuiservice domain=mobicore_app type=app_data_file levelFrom=user
+user=_app seinfo=platform name=com.mediatek.emcamera domain=emcamera_app type=app_data_file levelFrom=user
+user=_app seinfo=platform name=com.mediatek.sensorhub.ui domain=sensorhub_app type=app_data_file levelFrom=user
+user=_app seinfo=alpslegacy name=com.mizmowireless.acctmgt domain=alpslegacy_app type=app_data_file levelFrom=user
+user=_app seinfo=alpslegacy name=com.tmobile.simlock domain=alpslegacy_app type=app_data_file levelFrom=user
+user=_app seinfo=alpslegacy name=com.metro.simlock domain=alpslegacy_app type=app_data_file levelFrom=user
+user=_app seinfo=alpslegacy name=com.att.deviceunlock domain=alpslegacy_app type=app_data_file levelFrom=user
+user=_app isPrivApp=true name=com.trustonic.alpsservice domain=alpsd_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.trustonic.rsu.support domain=priv_app type=privapp_data_file levelFrom=user
+user=_app seinfo=platform name=com.debug.loggerui domain=debug_loggerui_app type=app_data_file levelFrom=all
