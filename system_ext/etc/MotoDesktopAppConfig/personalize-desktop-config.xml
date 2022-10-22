@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moto-desktop-app-config>
+    <package disallowOpenOnDesktop="true" packageName="com.motorola.personalize" />
+</moto-desktop-app-config>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <disallowed-managed-device  package="com.motorola.appforecast"/>
+    <disallowed-managed-profile package="com.motorola.appforecast"/>
+    <disallowed-managed-user    package="com.motorola.appforecast"/>
+</config>

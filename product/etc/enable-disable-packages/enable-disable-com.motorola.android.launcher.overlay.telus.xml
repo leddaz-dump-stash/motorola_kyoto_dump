@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (C) 2021 Motorola Mobility LLC,
+~ All Rights Reserved.
+~ Motorola Mobility Confidential Restricted.
+-->
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.motorola.android.launcher.overlay.telus" default_action="disable">
+        <criteria action="enable" channel="retca" mccmnc="302220" gid="5455"/>
+        <criteria action="enable" channel="retca" mccmnc="302221" gid="5455"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This change is similar to keep the apk enabled for all ro.carriers.
+ However explicite enable criteria is added for vzw channels, to enable the component
+ if disabled in earlier builds -->
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.motorola.comcast.settings.extensions" carrierBased="true" default_action="enable">
+        <criteria action="enable" channel="vzw"/>
+        <criteria action="enable" channel="vzwpre"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

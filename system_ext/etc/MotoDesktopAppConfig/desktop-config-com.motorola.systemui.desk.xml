@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<moto-desktop-app-config>
+
+    <package destroyWhenDisplayRemoved="true"
+        packageName="com.motorola.systemui.desk"/>
+
+    <component forceWindowMode="fullscreen"
+        componentName="com.motorola.systemui.desk/com.android.launcher3.secondarydisplay.SecondaryDisplayAppDrawer"/>
+
+    <component forceWindowMode="fullscreen"
+        componentName="com.motorola.systemui.desk/com.motorola.taskbar.settings.advanced.AppRestartConfiger"/>
+
+    <component forceWindowMode="fullscreen"
+        componentName="com.motorola.systemui.desk/com.motorola.taskbar.settings.helper.KeyboardShortcutHelper"/>
+</moto-desktop-app-config>

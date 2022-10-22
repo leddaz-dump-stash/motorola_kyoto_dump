@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (C) 2021 Motorola Mobility LLC,
+~ All Rights Reserved.
+~ Motorola Mobility Confidential Restricted.
+-->
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.motorola.android.launcher.overlay.amx" default_action="disable">
+        <criteria action="enable" channel="amxar"/>
+        <criteria action="enable" channel="amxmx"/>
+        <criteria action="enable" channel="amxbr"/>
+        <criteria action="enable" channel="amxcl"/>
+        <criteria action="enable" channel="amxco"/>
+        <criteria action="enable" channel="amxpe"/>
+        <criteria action="enable" channel="amxla"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

@@ -1,0 +1,2 @@
+(typeattributeset arcore_app_30_0 (arcore_app))
+(expandtypeattribute (arcore_app_30_0) true)

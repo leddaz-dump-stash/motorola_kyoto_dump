@@ -1,0 +1,7 @@
+system/system/lib64/libshowlogo.so
+system_ext/apex/com.android.vndk.v30.apex
+product/app/WebViewGoogle/WebViewGoogle.apk
+product/priv-app/GmsCore/GmsCore.apk
+product/priv-app/Messages/Messages.apk
+product/priv-app/MotCamera4/MotCamera4.apk
+product/priv-app/Velvet/Velvet.apk

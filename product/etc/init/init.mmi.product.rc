@@ -1,0 +1,76 @@
+# Config low memory kill params
+on post-fs
+    setprop ro.lmk.kill_heaviest_task true
+    setprop ro.lmk.file_low_percentage 20
+    setprop ro.lmk.pgscan_limit 3000
+    setprop ro.lmk.swap_free_low_percentage 10
+    setprop ro.lmk.swap_util_max 90
+    setprop ro.lmk.thrashing_limit 75
+    setprop ro.lmk.thrashing_limit_decay 15
+    setprop ro.lmk.threshold_decay 50
+    setprop ro.lmk.psi_complete_stall_ms 200
+    setprop ro.lmk.psi_partial_stall_ms 110
+    setprop persist.sys.perf_fwk_enabled true
+
+#Reinit lmkd to reconfigure lmkd propertise
+on property:sys.boot_completed=1
+    setprop lmkd.reinit 1
+
+on property:ro.vendor.hw.ram=6GB
+    setprop ro.config.use_compaction true
+    setprop ro.config.compact_action_1 4
+    setprop ro.config.compact_action_2 2
+    setprop ro.vendor.zram.product_swapon true
+    setprop persist.sys.zram_wb_size 1536M
+    setprop ro.zram.mark_idle_delay_mins 60
+    setprop ro.zram.first_wb_delay_mins 180
+    setprop ro.zram.periodic_wb_delay_hours 24
+    setprop dalvik.vm.heapminfree 6m
+   setprop dalvik.vm.heapmaxfree 24m
+on property:ro.vendor.hw.ram=8GB
+    setprop ro.config.use_compaction false
+    setprop ro.vendor.zram.product_swapon true
+    setprop persist.sys.zram_wb_size 2048M
+    setprop ro.zram.mark_idle_delay_mins 60
+    setprop ro.zram.first_wb_delay_mins 180
+    setprop ro.zram.periodic_wb_delay_hours 24
+    setprop dalvik.vm.heapminfree 8m
+    setprop dalvik.vm.heapmaxfree 32m
+
+on property:persist.sys.zram_wb_enabled="" && property:ro.vendor.zram.product_swapon=true
+    setprop persist.sys.zram_wb_enabled true
+
+on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=true
+    trigger sys-boot-completed-set
+
+# We want one opportunity per boot to enable zram, so we
+# use a trigger we fire from the above stanza. If
+# persist.sys.zram_wb_enabled becomes true after boot,
+# we swapon with zramwriteback; If
+# persist.sys.zram_wb_enabled false, we swapon
+# without zramwriteback
+on sys-boot-completed-set && property:persist.sys.zram_wb_enabled=true
+    write /proc/sys/vm/page-cluster 2
+    swapon_all /vendor/etc/fstab.enablezramwb
+    write /proc/sys/vm/swappiness 100
+    setprop sys.sysctl.swappiness 100
+
+on sys-boot-completed-set && property:persist.sys.zram_wb_enabled=false
+    write /proc/sys/vm/page-cluster 0
+    swapon_all /vendor/etc/fstab.enablezram
+    write /proc/sys/vm/swappiness 100
+    setprop sys.sysctl.swappiness 100
+
+# Tune Max bg apps
+on property:ro.vendor.hw.ram=6GB && property:persist.sys.zram_wb_enabled=false
+    setprop ro.MAX_HIDDEN_APPS 40
+on property:ro.vendor.hw.ram=8GB && property:persist.sys.zram_wb_enabled=false
+    setprop ro.MAX_HIDDEN_APPS 48
+on property:ro.vendor.hw.ram=6GB && property:persist.sys.zram_wb_enabled=true
+    setprop ro.MAX_HIDDEN_APPS 48
+on property:ro.vendor.hw.ram=8GB && property:persist.sys.zram_wb_enabled=true
+    setprop ro.MAX_HIDDEN_APPS 60
+
+#MotoBtAptxMode
+on boot
+    setprop persist.mot_bt.aptx_cert true

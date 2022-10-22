@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<exceptions>
+    <exception
+        package="com.summit.motorola.rcs">
+        <!-- Receive Opt SMS for ATT ACS -->
+        <permission name="android.permission.RECEIVE_SMS" fixed="false"/>
+    </exception>
+</exceptions>

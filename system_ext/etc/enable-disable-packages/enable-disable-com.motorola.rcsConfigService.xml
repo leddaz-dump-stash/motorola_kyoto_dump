@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.motorola.rcsConfigService" carrierBased="true" default_action="disable">
+        <criteria action="enable" channel="tmo;metropcs;att;attpre;cricket"/>
+        <criteria action="enable" channel="retus" mccmnc="310160" />
+        <criteria action="enable" channel="retus" mccmnc="310200" />
+        <criteria action="enable" channel="retus" mccmnc="310210" />
+        <criteria action="enable" channel="retus" mccmnc="310220" />
+        <criteria action="enable" channel="retus" mccmnc="310230" />
+        <criteria action="enable" channel="retus" mccmnc="310240" />
+        <criteria action="enable" channel="retus" mccmnc="310250" />
+        <criteria action="enable" channel="retus" mccmnc="310260" />
+        <criteria action="enable" channel="retus" mccmnc="310270" />
+        <criteria action="enable" channel="retus" mccmnc="310310" />
+        <criteria action="enable" channel="retus" mccmnc="310490" />
+        <criteria action="enable" channel="retus" mccmnc="310580" />
+        <criteria action="enable" channel="retus" mccmnc="310660" />
+        <criteria action="enable" channel="retus" mccmnc="310800" />
+        <criteria action="enable" channel="retus" mccmnc="311660" />
+        <criteria action="enable" channel="retus" mccmnc="311882" />
+        <criteria action="enable" channel="retus" mccmnc="312250" />
+    </package-disable-enable-criteria>
+</enable-disable-package>

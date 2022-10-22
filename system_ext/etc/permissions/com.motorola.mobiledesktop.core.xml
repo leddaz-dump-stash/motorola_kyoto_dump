@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<permissions>
+    <!-- feature for preload the ReadyForService. -->
+    <feature name="com.motorola.readyforservice" />
+</permissions>
+

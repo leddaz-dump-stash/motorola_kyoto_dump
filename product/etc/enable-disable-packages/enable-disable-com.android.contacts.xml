@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.android.contacts" carrierBased="true" default_action="disable">
+        <criteria action="enable" channel="tmo"/>
+        <criteria action="enable" channel="metropcs"/>
+        <criteria action="enable" channel="att"/>
+        <criteria action="enable" channel="attpre"/>
+        <criteria action="enable" channel="cricket"/>
+        <criteria action="enable" channel="vzw"/>
+        <criteria action="enable" channel="vzwpre"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

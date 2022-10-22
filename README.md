@@ -1,0 +1,14 @@
+# user 12 S2RKS32.92-11-21-1 99ec1a release-keys
+- manufacturer: motorola
+- platform: mt6853
+- codename: kyoto
+- flavor: user
+- release: 12
+- id: S2RKS32.92-11-21-1
+- incremental: 99ec1a
+- tags: release-keys
+- fingerprint: motorola/kyoto_retail/kyoto:12/S2RKS32.92-11-21-1/99ec1a:user/release-keys
+- is_ab: true
+- brand: motorola
+- branch: user-12-S2RKS32.92-11-21-1-99ec1a-release-keys
+- repo: motorola_kyoto_dump
