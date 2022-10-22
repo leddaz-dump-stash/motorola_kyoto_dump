@@ -1,0 +1,28 @@
+service bootanim /system/bin/bootanimation
+    class core animation
+    user graphics
+    group graphics audio
+    disabled
+    oneshot
+    ioprio rt 0
+    task_profiles MaxPerformance
+
+on property:service.bootanim.exit=0 && property:init.svc.bootanim=stopped
+    start bootanim
+
+# BEGIN Motorola, caijh, 15/07/2021, MOTODESK-3700
+service bootanim-readyfor /system/bin/bootanimation --readyfor
+    class core animation
+    user graphics
+    group graphics audio
+    disabled
+    oneshot
+    ioprio rt 0
+    task_profiles MaxPerformance
+
+on property:service.bootanim.readyfor.exit=0
+    start bootanim-readyfor
+
+on property:service.bootanim.readyfor.exit=1
+    stop bootanim-readyfor
+# BEGIN MOTODESK-3700
