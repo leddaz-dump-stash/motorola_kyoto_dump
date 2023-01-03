@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<filter-system-apps>
+    <module name="RcsUaService" action="enable" prop="ro.carrier" value="tmo;metropcs;att;attpre;cricket;vzw;vzwpre"/>
+</filter-system-apps>
+

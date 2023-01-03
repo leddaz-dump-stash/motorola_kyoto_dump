@@ -1,0 +1,51 @@
+<xml>
+    <ctbk_version>22</ctbk_version>
+
+    <!-- Config wifi power table in file txpowerctrl.cfg -->
+
+    <sar_sensors>
+        <sensor type="prox_front"           index="0">STK33562 Proximity</sensor>
+        <sensor type="prox_back"            index="1">null</sensor>
+        <!--Sensor channel type is from back view, and capsense channel name defined by BSP team(from front view)-->
+        <sensor type="cap_bottom_left"      index="2">capsense_bottom_right</sensor> <!--CS4, ANT0-->
+        <sensor type="cap_bottom_right"     index="3">capsense_bottom_left</sensor>  <!--CS6, ANT1-->
+        <sensor type="cap_top_right"        index="4">capsense_top_left</sensor>     <!--CS0, ANT4-->
+        <sensor type="cap_top_center"       index="5">capsense_top_mid</sensor>      <!--CS1, ANT5-->
+        <sensor type="cap_top"              index="6">capsense_top_right</sensor>    <!--CS3, ANT3-->
+    </sar_sensors>
+
+    <!--OB5 config: 00000101b (CS4 capsense_bottom_right | CS0 capsense_top_left)-->
+    <ob5_sensor_config indexBits="00101"/>
+
+    <!--Wifi TX0 config: 00010000b (CS3 capsense_top_right)-->
+    <wifi_tx0_sensor_config indexBits="10000"/>
+
+    <!--Modem TX0 config-->
+    <mdm_tx0_sensor_config indexBits="01111">
+        <support_lte_sensor_map>false</support_lte_sensor_map>
+        <lte_sensor_map>
+            <!--attribute lteBand: the lte band, "default" or "0" for other bands not specified out-->
+            <!--attribute indexBits: the index bit set of cap sensor used for the specified lte band-->
+            <lte_tx0_sensor lteBand="default"   indexBits="00000"/>
+        </lte_sensor_map>
+
+        <support_sensor_dsi_map>true</support_sensor_dsi_map>
+        <sensor_dsi_map>
+            <!--attribute indexBits: the index bit set of cap sensors, "default" or "0" for the default dsi-->
+            <!--attribute dsi: the DSI state triggerd by the cap sensors in index bit set-->
+            <dsi_tx0_sensors indexBits="default"    dsi="10"/>
+            <dsi_tx0_sensors indexBits="01011"      dsi="5"/>
+            <dsi_tx0_sensors indexBits="01110"      dsi="15"/>
+            <dsi_tx0_sensors indexBits="00011"      dsi="14"/>
+            <dsi_tx0_sensors indexBits="00101"      dsi="15"/>
+            <dsi_tx0_sensors indexBits="01001"      dsi="16"/>
+            <dsi_tx0_sensors indexBits="00110"      dsi="17"/>
+            <dsi_tx0_sensors indexBits="01010"      dsi="18"/>
+            <dsi_tx0_sensors indexBits="01100"      dsi="19"/>
+            <dsi_tx0_sensors indexBits="00001"      dsi="10"/>
+            <dsi_tx0_sensors indexBits="00010"      dsi="11"/>
+            <dsi_tx0_sensors indexBits="00100"      dsi="12"/>
+            <dsi_tx0_sensors indexBits="01000"      dsi="13"/>
+        </sensor_dsi_map>
+    </mdm_tx0_sensor_config>
+</xml>

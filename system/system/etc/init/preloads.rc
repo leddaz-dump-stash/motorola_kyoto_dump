@@ -1,0 +1,6 @@
+# IKSWP-67158 Create the /data/preloads directory and subdirectories
+on zygote-start
+    mkdir /data/preloads 0775 system system
+    mkdir /data/preloads/media 0775 system system
+    mkdir /data/preloads/demo 0775 system system
+
