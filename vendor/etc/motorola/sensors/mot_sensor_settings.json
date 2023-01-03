@@ -1,0 +1,105 @@
+{
+  "chopchop params": {
+      "max_gyro_rotation": 102.0,
+      "max_chop_duration_ms": 350,
+      "first_accel_threshold": 38.0,
+      "second_accel_threshold": 30.0,
+      "min_magnitude_percentage": 0.3,
+      "max_xy_percentage": 0.45,
+      "gyroless": false
+  },
+  "camgest params": {
+      "y_orient_down_thres": -4.25,
+      "y_orient_up_thres": 4.22
+  },
+  "glance params": {
+      "motion_threshold": 0.04,
+      "cool_time": 3000,
+      "gesture_allow": 23,
+      "uncover_timeout": 900
+  },
+  "ltv params": {
+      "min_accel_rotation": 19.0,
+      "accel_fast_alpha": 0.25,
+      "accel_slow_alpha": 0.0625,
+      "land_conv_cnt": 3,
+      "min_accel_rotation_wake": 8.0,
+      "non_accel_rotation_ff": 4.0,
+      "rearm_non_rotation": 8.0,
+      "rearm_min_accel_rotation": 30.0,
+      "rearm_forced_accel_rotation": 80.0,
+      "rearm_conv_cnt": 40,
+      "raw_accel_margin": 4.2
+  },
+  "offbody params": {
+      "alpha": 0.1,
+      "var_lt": 0.03,
+      "var_ht": 0.3,
+      "th_cnt": 5,
+      "st_alpha": 0.1,
+      "st_var_ht": 5.0,
+      "theta_exit": 2.0,
+      "theta_low": 180.0,
+      "theta_high": 0.0,
+      "qual_mode":false
+  },
+  "als params": {
+      "als_offset": 5,
+      "ratio_c": 1,
+      "ratio_d": 22,
+      "ratio_a": 75,
+      "window_c": 1.0,
+      "window_d": 0.1672,
+      "window_a": 0.0877,
+      "window_h": 0.0377,
+      "min_c_data": 40,
+      "min_g_data": 20,
+      "max_als_data": 64000,
+      "min_als_data": 1500,
+      "ratio_h": 76,
+      "scale": 100.0,
+      "default_scale": 100.0,
+      "target_lux": 500,
+      "polling_mode_als": 0
+  },
+  "ps params": {
+      "wait": 32,
+      "prst_ps": 1,
+      "gain_ps": 3,
+      "gain_ps_dx16": 1,
+      "it_ps": 2,
+      "irdr_led": 6,
+      "prst_als": 0,
+      "gain_als": 2,
+      "gain_als_dx128": 0,
+      "gain_c": 2,
+      "gain_c_dx128": 0,
+      "it_als": 1,
+      "near_threshold": 700,
+      "far_threshold": 550,
+      "default_near_threshold": 8102,
+      "default_far_threshold": 6102,
+      "high_coeff": 0.68,
+      "low_coeff": 0.34,
+      "cover": 960,
+      "uncover": 340,
+      "default_cover": 5002,
+      "default_uncover": 4002,
+      "min_delta": 0,
+      "pUseOilAlgo": 1,
+      "polling_mode_ps": 0
+  },
+  "mot algo ps params": {
+      "pUseOilAlgo": 0,
+      "pLowTH": 2300,
+      "pHighTH": 2400,
+      "WTime": 64,
+      "high_coef": 0.68,
+      "low_coef": 0.34
+  },
+  "oil params": {
+      "SMUDGE_NT": 400,
+      "SMUDGE_FT": 350,
+      "SMUDGE_DIFF": 6000
+  }
+}

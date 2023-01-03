@@ -1,0 +1,9 @@
+service thermal_manager /vendor/bin/thermal_manager
+    class main
+    user root
+    group system
+    oneshot
+
+on property:vendor.thermal.mode=*
+	stop thermal_manager
+	start thermal_manager
