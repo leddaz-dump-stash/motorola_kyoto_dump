@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<permissions>
+    <!-- feature for preload the ReadyFor. -->
+    <feature name="com.motorola.readyfor" />
+
+    <!-- freeform window management for MotoDesktop. -->
+    <feature name="android.software.freeform_window_management" />
+</permissions>
+

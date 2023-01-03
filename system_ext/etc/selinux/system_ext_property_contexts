@@ -1,0 +1,510 @@
+#line 1 "motorola/security/sepolicy/system_ext/private/property_contexts"
+## NOTE: Contexts added in this file MUST start with a blank line as below.
+
+sys.cppreopt_oem        u:object_r:cppreopt_prop:s0
+
+ro.nfc.                 u:object_r:nfc_prop:s0
+
+ro.location.providers.allowed        u:object_r:system_prop:s0
+media.httplive.                      u:object_r:audio_prop:s0
+media.proxy.                         u:object_r:media_proxy_prop:s0
+
+# Facebook app partner id
+persist.app.facebook.partnerid    u:object_r:fb_partner_id_prop:s0
+
+# Enterprise edition
+persist.app.settings.enterprise_edition  u:object_r:enterprise_edition_prop:s0
+
+# Channel id
+persist.app.settings.channel_id  u:object_r:channel_id_prop:s0
+
+# Sub channel id
+persist.app.settings.sub_channel_id  u:object_r:channel_id_prop:s0
+
+# Spotify properties
+ro.csc.spotify.music.referrerid u:object_r:spotify_prop:s0
+ro.csc.spotify.music.partnerid u:object_r:spotify_prop:s0
+persist.app.spotify.music.partnerid u:object_r:spotify_persist_prop:s0
+persist.app.spotify.music.referrerid u:object_r:spotify_persist_prop:s0
+
+# property related to IMS debugging in moto system.img
+persist.dbg.show_ims_icon            u:object_r:ims_dbg_prop:s0
+persist.dbg.vce_avail_ovr            u:object_r:ims_dbg_prop:s0
+persist.dbg.volte_avail_ovr          u:object_r:ims_dbg_prop:s0
+persist.dbg.vt_avail_ovr             u:object_r:ims_dbg_prop:s0
+persist.dbg.wfc_avail_ovr            u:object_r:ims_dbg_prop:s0
+
+#Carrier persist properties
+persist.carrier                      u:object_r:carrier_prop:s0
+
+# Property for Remosaic/QCFA sensors
+ro.camera.cfa.packagelist    u:object_r:camera_cfa_prop:s0
+
+# Property for Camera app pinning
+pinner.pin_camera            u:object_r:system_prop:s0
+
+#persist omadm properties
+persist.omadm.operator. u:object_r:persist_omadm_prop:s0
+
+# cache publish status for RCS
+rcs.publish.status u:object_r:radio_prop:s0
+
+ro.mot.build.guid          u:object_r:moto_ota_prop:s0
+ro.mot.version.full        u:object_r:moto_ota_prop:s0
+
+ro.cdma.home.operator.     u:object_r:radio_prop:s0
+cdma.operator.numeric      u:object_r:radio_prop:s0
+
+# Framework properties
+fw.max_users            u:object_r:framework_prop:s0
+fw.show_multiuserui     u:object_r:framework_prop:s0
+persist.mot             u:object_r:moto_system_prop:s0
+ro.sys.adb_reset_protected u:object_r:system_prop:s0
+
+# Add property to disable adb for DF units
+persist.mot.dogfooding u:object_r:moto_df_prop:s0
+
+# Facebook partner id
+ro.facebook.partnerid   u:object_r:system_prop:s0
+
+# Orange brand1
+ro.product.brand1       u:object_r:system_prop:s0
+
+# GMS clientid shadow properties
+ro.mot.gms.clientidbase u:object_r:system_prop:s0
+
+# GMS Google News shadow property
+ro.mot.gms.rlz_ap_whitelist u:object_r:system_prop:s0
+
+# carrier riongtone shadow properties
+ro.mot.config.ringtone  u:object_r:system_prop:s0
+ro.mot.config.notification_sound u:object_r:system_prop:s0
+
+# Property for switch Boot Animation
+persist.switch.bootanimation     u:object_r:mot_bootanimation_prop:s0
+
+#Motorola popup sound feature
+ro.mot.popup_device              u:object_r:system_prop:s0
+persist.sys.popup_sound          u:object_r:system_prop:s0
+
+# Security properties related for vendor and system process to read
+ro.boot.hab.product u:object_r:bootloader_prop:s0 exact string
+ro.boot.hab.cid u:object_r:bootloader_prop:s0 exact int
+ro.boot.hab.csv u:object_r:bootloader_prop:s0 exact int
+ro.mot.hab.product u:object_r:bootloader_prop:s0 exact string
+ro.mot.hab.cid u:object_r:bootloader_prop:s0 exact int
+ro.mot.hab.csv u:object_r:bootloader_prop:s0 exact int
+ro.boot.secure_hardware u:object_r:bootloader_prop:s0 exact int
+ro.boot.updating u:object_r:bootloader_prop:s0 exact int
+partition.oem.verified u:object_r:verity_status_prop:s0 exact int
+## Allow mbm_spy, tcmd read from vendor
+ro.build.version.full u:object_r:build_prop:s0 exact string
+## Allow mbm_spy, read from vendor
+ro.build.artifacts u:object_r:build_prop:s0 exact string
+
+## Allow qcrild read moto customid properties
+ro.mot.build.customerid u:object_r:build_prop:s0 exact string
+
+# property related to IMS debugging, persist.dbg.allow_ims_off is AOSP property
+persist.dbg.allow_ims_off u:object_r:telephony_config_prop:s0 exact int
+#
+## Allow ims domain read Moto added ims properties
+persist.dbg.show_ims_icon u:object_r:telephony_config_prop:s0 exact int
+persist.dbg.vce_avail_ovr u:object_r:telephony_config_prop:s0 exact int
+
+# Allow Mot phonelock and policylocked props to read from vendor
+persist.sys.phonelock.mode u:object_r:exported_system_prop:s0 exact int
+persist.sys.usb.policylocked u:object_r:exported_system_prop:s0 exact int
+ro.sys.adb_reset_protected u:object_r:exported_system_prop:s0 exact int
+
+#Allow sys.tcmd_system.action prop to set in vendor_init
+sys.tcmd_system.action   u:object_r:exported_config_prop:s0 exact string
+#
+## Allow ro.build.shutdown_timeout prop to set in vendor_init
+ro.build.shutdown_timeout   u:object_r:build_config_prop:s0 exact int
+
+# Property relate to ringtone2 IKSWP-14860
+ro.config.ringtone_2  u:object_r:systemsound_config_prop:s0 exact string
+
+# P upgrades: camera mod system props are read from system and vendor
+camera.mot.rc_id            u:object_r:exported_system_prop:s0 exact int
+camera.mot.mod_id           u:object_r:exported_system_prop:s0 exact int
+
+# Allow camera HAL to access gsm.operator.xxx
+gsm.operator.iso-country u:object_r:telephony_status_prop:s0 exact string
+gsm.operator.numeric u:object_r:telephony_status_prop:s0 exact string
+
+# Allow camera interface to access ro.camera.xxx
+ro.camera.req.fmq.size u:object_r:camera_config_prop:s0 exact int
+ro.camera.res.fmq.size u:object_r:camera_config_prop:s0 exact int
+
+## Allow vendor init set the ro.build.sw_version and ro.build.tf_modelnumber
+ro.build.tf_modelnumber u:object_r:exported_default_prop:s0 exact string
+ro.build.sw_version     u:object_r:exported_default_prop:s0 exact string
+#
+## Property relate to Google News revenue share IKSWP-29257 and IKSWP-40470
+ro.com.google.rlz_ap_whitelist u:object_r:exported_config_prop:s0 exact string
+
+# Property for Led lighting
+persist.charge.led.lighting         u:object_r:exported_system_prop:s0 exact string
+
+# Property for camera
+camera.mot.is.coming.cts     u:object_r:exported_system_prop:s0 exact string
+camera.mot.is.coming.aosp    u:object_r:exported_system_prop:s0 exact string
+camera.mot.is.client.foreground    u:object_r:exported_system_prop:s0 exact string
+
+# Property for camera csid error check
+camera.mot.csid.error     u:object_r:moto_camera_csid_error_prop:s0 exact string
+
+# Property hardware soc manufacturer
+ro.hardware.soc.manufacturer u:object_r:soc_prop:s0 exact string
+
+# mot_bt_prop
+persist.mot_bt.    u:object_r:mot_bt_prop:s0
+
+# read bootanim state in autotest script
+init.svc.bootanim u:object_r:init_service_status_prop:s0 exact string
+
+# for reading system property by health@1.0-serv
+sys.mod.batterymode u:object_r:exported_system_prop:s0 exact int
+
+# export the ram size property
+ro.hardware.device.ram_size u:object_r:exported_default_prop:s0 exact string
+
+# Trigger to start WLAN driver logs service
+persist.wlan.debug_log  u:object_r:wlan_log_prop:s0
+
+# Moto Desktop feature
+mot.hdmi.audio_allow     u:object_r:mot_desktop_prop:s0
+mot.rdp.audio_output_activated     u:object_r:mot_desktop_prop:s0
+mot.audio.allow_recording_voip     u:object_r:mot_desktop_prop:s0
+persist.desktop.    u:object_r:mot_desktop_prop:s0
+ro.product.motodesktop u:object_r:build_prop:s0 exact int
+ro.product.readyfor.lite u:object_r:build_prop:s0 exact int
+
+# Label ro.setupwizard.require_network and ro.setupwizard.user_req_network
+# to allow to set these properties in init.mmi.carrier.sh
+ro.setupwizard.require_network u:object_r:carrier_prop:s0
+ro.setupwizard.user_req_network u:object_r:carrier_prop:s0
+
+# Zram writeback
+persist.sys.zram_wb_enabled     u:object_r:zram_control_prop:s0 exact bool
+persist.sys.zram_wb_size        u:object_r:zram_control_prop:s0 exact string
+
+# export is_prc to vendor
+ro.product.is_prc         u:object_r:build_prop:s0 exact bool
+
+# Allow vendor init set the ro.mot.enable_tmo_messaging_ps_feature and ro.mot.enable_att_messaging_ps_feature
+ro.mot.enable_tmo_messaging_ps_feature u:object_r:telephony_config_prop:s0 exact string
+ro.mot.enable_att_messaging_ps_feature u:object_r:telephony_config_prop:s0 exact string
+
+# Property for System fonts
+persist.sys.overlayfonts         u:object_r:exported_system_prop:s0 exact string
+
+# Properties for Lmkd
+ro.lmk.pgscan_limit             u:object_r:lmkd_config_prop:s0 exact int
+ro.lmk.file_low_percentage      u:object_r:lmkd_config_prop:s0 exact int
+ro.lmk.file_high_percentage     u:object_r:lmkd_config_prop:s0 exact int
+ro.lmk.threshold_decay          u:object_r:lmkd_config_prop:s0 exact int
+
+# Properties used for mmi_carrier to set demo mode and max charger temperature
+ro.sys.force_demo_mode           u:object_r:system_prop:s0
+ro.sys.force_max_chrg_temp       u:object_r:system_prop:s0
+
+# Property to check if it is a production build
+ro.product.is_production         u:object_r:system_prop:s0
+
+# Window rotation property for Speaker swap feature
+ro.audio.monitorWindowRotation  u:object_r:audio_config_prop:s0 exact bool
+
+# Property for camera
+persist.motocam.iscoming u:object_r:exported_system_prop:s0 exact int
+
+# Allow set ro.telephony.sim.count dynamicly
+ro.telephony.sim.count         u:object_r:telephony_config_prop:s0 exact int
+
+##NOTE: DO NOT change the last line, keep it as blank!.
+
+#line 1 "motorola/security/sepolicy/system_ext/private/mtk/property_contexts"
+
+#============allow pullFWlog property=============
+vendor.pullFWLog                   u:object_r:system_mtk_pullFWlog_prop:s0
+
+#line 1 "motorola/security/sepolicy/features/att/iqi/system_ext/private/property_contexts"
+
+# Property to check power-up reason
+ro.vendor.boot.powerup_reason      u:object_r:vendor_boot_powerup_reason_prop:s0
+#
+
+#line 1 "motorola/security/sepolicy/features/mtk_modem_logging/system_ext/private/property_contexts"
+
+persist.vendor.mtk.aee. u:object_r:system_mtk_persist_mtk_aee_prop:s0
+
+persist.vendor.aee. u:object_r:system_mtk_persist_aee_prop:s0
+
+vendor.debug.mtk.aee. u:object_r:system_mtk_debug_mtk_aee_prop:s0
+
+init.svc.aee_aedv   u:object_r:system_mtk_init_svc_aee_aedv_prop:s0
+
+#=============allow netlog==============
+vendor.mtklog         u:object_r:system_mtk_debug_mtklog_prop:s0
+vendor.netlog         u:object_r:system_mtk_debug_netlog_prop:s0
+
+#=============allow mdlogger==============
+vendor.mdlogger      u:object_r:system_mtk_debug_mdlogger_prop:s0
+vendor.mdl           u:object_r:system_mtk_mdl_prop:s0
+
+#=============allow mobile log property================
+vendor.MB. u:object_r:system_mtk_mobile_log_prop:s0
+
+
+#line 1 "device/mediatek/sepolicy/basic/plat_private/property_contexts"
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+ro.audio.usb.period_us u:object_r:exported_default_prop:s0 exact int
+
+persist.adb.nonblocking_ffs u:object_r:exported_default_prop:s0 exact int
+
+vendor.MB.logpost         u:object_r:system_mtk_mobile_log_post_prop:s0
+vendor.MB.logpost.        u:object_r:system_mtk_mobile_log_post_prop:s0
+persist.vendor.MB.logpost u:object_r:system_mtk_mobile_log_post_prop:s0
+
+persist.vendor.mtklog u:object_r:system_mtk_persist_mtklog_prop:s0
+vendor.starting.mode u:object_r:system_mtk_mdl_start_prop:s0
+persist.vendor.mdl   u:object_r:system_mtk_persist_mdlog_prop:s0
+vendor.pullmdlog     u:object_r:system_mtk_mdl_pulllog_prop:s0
+
+vendor.debug.bq.dump u:object_r:system_mtk_debug_bq_dump_prop:s0
+
+persist.vendor.bootanim. u:object_r:system_mtk_bootani_prop:s0
+
+persist.vendor.radio.bgdata.disabled u:object_r:system_mtk_bgdata_disabled_prop:s0
+
+persist.vendor.radio.gprs.attach.type u:object_r:system_mtk_gprs_attach_type_prop:s0
+
+persist.vendor.mtk_rcs_single_reg_support u:object_r:system_mtk_rcs_single_reg_support_prop:s0
+
+vendor.ril.test.poweroffmd u:object_r:system_mtk_power_off_md_prop:s0
+vendor.ril.testmode        u:object_r:system_mtk_power_off_md_prop:s0
+
+# sim config property
+vendor.gsm.sim.operator.default-name u:object_r:system_mtk_sim_system_prop:s0
+
+vendor.connsysfw u:object_r:system_mtk_connsysfw_prop:s0
+
+vendor.bthcisnoop u:object_r:system_mtk_vendor_bluetooth_prop:s0
+
+# xcap rawurl config
+persist.vendor.mtk.xcap.rawurl u:object_r:system_mtk_persist_xcap_rawurl_prop:s0
+
+ctl.mdlogger   u:object_r:system_mtk_ctl_mdlogger_prop:s0
+ctl.emdlogger1 u:object_r:system_mtk_ctl_emdlogger1_prop:s0
+ctl.emdlogger2 u:object_r:system_mtk_ctl_emdlogger2_prop:s0
+ctl.emdlogger3 u:object_r:system_mtk_ctl_emdlogger3_prop:s0
+
+init.svc.emdlogger1 u:object_r:system_mtk_init_svc_emdlogger1_prop:s0
+
+#=============mtk wifi driver log property====================
+persist.vendor.wlan.standalone.log        u:object_r:system_mtk_wifisa_log_prop:s0
+
+# mtk audio log and dump property
+vendor.af.mixer.pcm           u:object_r:system_mtk_audio_prop:s0
+vendor.af.track.pcm           u:object_r:system_mtk_audio_prop:s0
+vendor.af.offload.write.raw   u:object_r:system_mtk_audio_prop:s0
+vendor.af.resampler.pcm       u:object_r:system_mtk_audio_prop:s0
+vendor.af.mixer.end.pcm       u:object_r:system_mtk_audio_prop:s0
+vendor.af.record.dump.pcm     u:object_r:system_mtk_audio_prop:s0
+vendor.af.effect.pcm          u:object_r:system_mtk_audio_prop:s0
+vendor.af.mixer.drc.pcm       u:object_r:system_mtk_audio_prop:s0
+vendor.af.dumplog             u:object_r:system_mtk_audio_prop:s0
+vendor.aaudio.pcm             u:object_r:system_mtk_audio_prop:s0
+vendor.af.audioflinger.log    u:object_r:system_mtk_audio_prop:s0
+vendor.af.track.log           u:object_r:system_mtk_audio_prop:s0
+vendor.af.policy.debug        u:object_r:system_mtk_audio_prop:s0
+vendor.af.audioserver.restart u:object_r:system_mtk_audio_prop:s0
+
+# mtk display driver log property
+vendor.debug.sf.log_repaint      u:object_r:system_mtk_sf_debug_prop:s0
+vendor.debug.sf.log_transaction  u:object_r:system_mtk_sf_debug_prop:s0
+vendor.debug.sf.restart          u:object_r:system_mtk_sf_debug_prop:s0
+
+#=============mtk pl_lnk property====================
+persist.vendor.mtk.pl_lnk                u:object_r:system_mtk_persist_pllnk_prop:s0
+persist.vendor.mtk.boot0_linka           u:object_r:system_mtk_persist_pllnk_prop:s0
+persist.vendor.mtk.boot0_linkb           u:object_r:system_mtk_persist_pllnk_prop:s0
+persist.vendor.mtk.boot0_linkc           u:object_r:system_mtk_persist_pllnk_prop:s0
+persist.vendor.mtk.boot1_linka           u:object_r:system_mtk_persist_pllnk_prop:s0
+persist.vendor.mtk.boot1_linkb           u:object_r:system_mtk_persist_pllnk_prop:s0
+persist.vendor.mtk.boot1_linkc           u:object_r:system_mtk_persist_pllnk_prop:s0
+#line 1 "device/mediatek/sepolicy/bsp/plat_private/property_contexts"
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+ctl.atcid-daemon-u                    u:object_r:system_mtk_ctl_atcid_daemon_u_prop:s0
+persist.vendor.radio.port_index       u:object_r:system_mtk_atci_sys_prop:s0
+vendor.ril.atci.flightmode            u:object_r:system_mtk_atci_sys_prop:s0
+persist.vendor.service.atci.autostart u:object_r:system_mtk_atci_sys_prop:s0
+persist.vendor.service.atci.usermode  u:object_r:system_mtk_atci_sys_prop:s0
+
+vendor.ril.capctrl_loaded             u:object_r:system_mtk_capctrl_sys_prop:s0
+
+persist.vendor.sys.aal. u:object_r:system_mtk_aal_prop:s0
+
+vendor.moms.permission.control.policy.set u:object_r:system_mtk_permission_control_prop:s0
+
+persist.vendor.ter u:object_r:system_mtk_terservice_prop:s0
+vendor.ter.service u:object_r:system_mtk_terservice_prop:s0
+
+ro.vendor.mtk_cta_set u:object_r:system_mtk_cta_set_prop:s0
+
+ro.sys.current_rsc_path     u:object_r:system_mtk_rsc_sys_prop:s0
+ro.product.current_rsc_path u:object_r:system_mtk_rsc_sys_prop:s0
+ro.sys_ext.current_rsc_path u:object_r:system_mtk_rsc_sys_prop:s0
+
+# Restrict access to starting/stopping campostalgo
+ctl.start$camerapostalgo   u:object_r:system_mtk_ctl_campostalgo_prop:s0
+ctl.stop$camerapostalgo    u:object_r:system_mtk_ctl_campostalgo_prop:s0
+ctl.restart$camerapostalgo u:object_r:system_mtk_ctl_campostalgo_prop:s0
+
+persist.vendor.radio.telecom.vibrate u:object_r:system_mtk_telecom_vibrate_prop:s0
+
+ro.vendor.graphiclowlatency.version u:object_r:system_mtk_graphics_sf_gll_ro_prop:s0
+vendor.debug.sf.                    u:object_r:system_mtk_debug_sf_prop:s0
+vendor.debug.bq.                    u:object_r:system_mtk_debug_bq_prop:s0
+
+# CT SelfRegister property
+persist.vendor.radio.selfreg u:object_r:system_mtk_selfreg_prop:s0
+
+# USB tethering property for auto test
+persist.vendor.net.tethering u:object_r:system_mtk_usb_tethering_prop:s0
+
+# android log much detect
+persist.vendor.logmuch u:object_r:system_mtk_logmuch_prop:s0
+
+persist.vendor.entitlement_enabled u:object_r:system_mtk_wfc_entitlement_prop:s0
+persist.vendor.entitlement.sesurl  u:object_r:system_mtk_wfc_entitlement_prop:s0
+persist.vendor.net.wo.epdg_fqdn    u:object_r:system_mtk_wfc_entitlement_prop:s0
+
+persist.vendor.mtk_wfc_opt_in    u:object_r:system_mtk_wfc_opt_in_prop:s0
+persist.vendor.opt-in.url        u:object_r:system_mtk_opt_in_url_prop:s0
+persist.vendor.apptoken.required u:object_r:system_mtk_apptoken_required_prop:s0
+
+# common data releated property
+persist.vendor.radio.default.data.selected u:object_r:system_mtk_common_data_prop:s0
+persist.vendor.radio.mobile.mtu            u:object_r:system_mtk_common_data_prop:s0
+vendor.radio.dsda.state                    u:object_r:system_mtk_common_data_prop:s0
+
+# carrier express (cxp)
+persist.vendor.operator.optr_1 u:object_r:system_mtk_usp_srv_prop:s0
+persist.vendor.operator.spec_1 u:object_r:system_mtk_usp_srv_prop:s0
+persist.vendor.operator.seg_1  u:object_r:system_mtk_usp_srv_prop:s0
+persist.vendor.mtk_usp         u:object_r:system_mtk_usp_srv_prop:s0
+
+persist.vendor.update_finished u:object_r:system_mtk_update_prop:s0
+persist.vendor.previous_slot   u:object_r:system_mtk_update_prop:s0
+
+vendor.media.wfd.             u:object_r:system_mtk_media_wfd_prop:s0
+vendor.media.wfd.portrait     u:object_r:system_mtk_media_wfd_prop:s0
+vendor.media.wfd.video-format u:object_r:system_mtk_media_wfd_prop:s0
+
+vendor.gsm.disable.sim.dialog u:object_r:system_mtk_vsim_sys_prop:s0
+
+# supplementary service property
+vendor.gsm.radio.ss.sc                u:object_r:system_mtk_supp_serv_prop:s0
+vendor.gsm.radio.ss.imsdereg          u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.radio.cfu.iccid.       u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.radio.cfu.change.      u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.radio.cfu_over_ims     u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.radio.cfu.sync_for_ota u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.radio.cfu.mode         u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.radio.cfu.timeslot.    u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.radio.cfu.querytype    u:object_r:system_mtk_supp_serv_prop:s0
+persist.vendor.suppserv.              u:object_r:system_mtk_supp_serv_prop:s0
+vendor.suppserv.                      u:object_r:system_mtk_supp_serv_prop:s0
+
+vendor.bluetooth.         u:object_r:system_mtk_bluetooth_prop:s0
+persist.vendor.bluetooth. u:object_r:system_mtk_bluetooth_prop:s0
+
+# tel log property
+persist.vendor.log.tel_dbg u:object_r:system_mtk_em_tel_log_prop:s0
+
+# ims config property
+vendor.ril.imsconfig.force.notify u:object_r:system_mtk_imsconfig_prop:s0
+
+# mtk duraspeed property
+persist.vendor.sys.vm.drop_caches u:object_r:system_mtk_duraspeed_drop_caches_prop:s0
+
+ro.vendor.mtk_system_update_support u:object_r:system_mtk_update_support_prop:s0
+
+# AMS dynamic enable log property
+persist.vendor.sys.activitylog u:object_r:system_mtk_amslog_prop:s0
+
+# AMS-aal dynamic enable property
+persist.vendor.sys.mtk_app_aal_support u:object_r:system_mtk_amsaal_prop:s0
+
+# MTK CDMA Less property
+persist.vendor.vzw_device_type u:object_r:system_mtk_persist_vendor_vzw_device_type_prop:s0
+
+persist.vendor.mtk_rtt_support u:object_r:system_mtk_rtt_prop:s0
+
+persist.vendor.ctm_slot_flag u:object_r:system_mtk_ctmslot_prop:s0
+
+persist.vendor.mtk_uce_support u:object_r:system_mtk_uce_support_prop:s0
+
+persist.vendor.mtk_clientapi_support u:object_r:system_mtk_clientapi_support_prop:s0
+
+vendor.cdma.icc.operator.mcc u:object_r:system_mtk_cdma_prop:s0
+
+# ECBM property
+vendor.ril.cdma.inecmmode_by_slot u:object_r:system_mtk_cdma_ecm_prop:s0
+
+persist.vendor.mtk_rcs_support u:object_r:system_mtk_rcs_support_prop:s0
+
+# MTK World Phone property
+persist.vendor.radio.wm_selectmode u:object_r:system_mtk_world_phone_prop:s0
+persist.vendor.radio.wm_fddtimer   u:object_r:system_mtk_world_phone_prop:s0
+
+# MTK Capability Switch property
+persist.vendor.radio.unlock           u:object_r:system_mtk_capability_switch_prop:s0
+persist.vendor.radio.unlock.roaming   u:object_r:system_mtk_capability_switch_prop:s0
+persist.vendor.radio.wait.imsi        u:object_r:system_mtk_capability_switch_prop:s0
+persist.vendor.radio.waitimsi.roaming u:object_r:system_mtk_capability_switch_prop:s0
+persist.vendor.radio.sim.status       u:object_r:system_mtk_capability_switch_prop:s0
+persist.vendor.radio.new.sim.slot     u:object_r:system_mtk_capability_switch_prop:s0
+vendor.ril.imsi.status.               u:object_r:system_mtk_capability_switch_prop:s0
+persist.vendor.radio.simswitchstate   u:object_r:system_mtk_capability_switch_prop:s0
+
+persist.vendor.subsidylock.connectivity_status u:object_r:system_mtk_subsidylock_connect_prop:s0
+persist.vendor.subsidylock                     u:object_r:system_mtk_subsidylock_prop:s0
+
+persist.vendor.mtk_acs_version u:object_r:system_mtk_acs_version_prop:s0
+persist.vendor.mtk_acs_support u:object_r:system_mtk_acs_support_prop:s0
+persist.vendor.mtk_acs_url     u:object_r:system_mtk_acs_url_prop:s0
+
+# Modem Monitor property===========
+persist.vendor.mdmmonitor u:object_r:config_prop:s0
+
+init.svc.mtk_pkm_service u:object_r:system_mtk_pkm_init_prop:s0
+
+# MDM init control property
+init.svc.md_monitor u:object_r:system_mtk_init_svc_md_monitor_prop:s0
+
+# netflix HD property
+ro.netflix.bsp_rev u:object_r:netflix_bsp_rev_prop:s0
+
+service.ctm.slot_flag u:object_r:system_mtk_ctm_prop:s0
+
+vendor.sf.gll.istarget u:object_r:system_mtk_graphics_sf_gll_prop:s0
+vendor.sf.gll.q2l      u:object_r:system_mtk_graphics_sf_gll_prop:s0
+vendor.sf.gll.avgl2p   u:object_r:system_mtk_graphics_sf_gll_prop:s0
+
+ro.vendor.mtk_gwsd_support u:object_r:system_mtk_gwsd_prop:s0
+
+ro.vendor.vodata_support u:object_r:system_mtk_vodata_prop:s0
+
+# fastdormancy property
+persist.vendor.fd.on.charge         u:object_r:system_mtk_fd_prop:s0
+persist.vendor.fd.screen.off.only   u:object_r:system_mtk_fd_prop:s0

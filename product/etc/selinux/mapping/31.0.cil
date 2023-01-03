@@ -1,0 +1,7 @@
+(typeattributeset arcore_app_31_0 (arcore_app))
+(expandtypeattribute (arcore_app_31_0) true)
+(typeattribute arcore_app_31_0)
+(typeattributeset moto_stylus_app_31_0 (moto_stylus_app))
+(expandtypeattribute (moto_stylus_app_31_0) true)
+(typeattribute moto_stylus_app_31_0)
+

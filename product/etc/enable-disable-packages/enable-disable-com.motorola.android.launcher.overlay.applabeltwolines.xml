@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (C) 2022 Motorola Mobility LLC,
+~ All Rights Reserved.
+~ Motorola Mobility Confidential Restricted.
+-->
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.motorola.android.launcher.overlay.applabeltwolines" carrierBased="true" default_action="disable">
+        <criteria action="enable" channel="amz"/>
+        <criteria action="enable" channel="att"/>
+        <criteria action="enable" channel="attpre"/>
+        <criteria action="enable" channel="boost"/>
+        <criteria action="enable" channel="cc"/>
+        <criteria action="enable" channel="comcast"/>
+        <criteria action="enable" channel="cricket"/>
+        <criteria action="enable" channel="fi"/>
+        <criteria action="enable" channel="metropcs"/>
+        <criteria action="enable" channel="retca"/>
+        <criteria action="enable" channel="retus"/>
+        <criteria action="enable" channel="spectrum"/>
+        <criteria action="enable" channel="tmo"/>
+        <criteria action="enable" channel="tracfone"/>
+        <criteria action="enable" channel="usc"/>
+        <criteria action="enable" channel="vzw"/>
+        <criteria action="enable" channel="vzwpre"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

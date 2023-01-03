@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<permissions>
+    <privapp-permissions package="com.bluetooth.aptxmode">
+        <!-- MotoBtAptxMode privileged permissions -->
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    </privapp-permissions>
+</permissions>

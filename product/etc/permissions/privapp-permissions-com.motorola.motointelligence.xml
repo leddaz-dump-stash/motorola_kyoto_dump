@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<permissions>
+    <privapp-permissions package="com.motorola.motointelligence">
+
+        <!-- signature|privileged -->
+        <permission name="com.motorola.permission.EXTRA_SCREEN_STATUS"/>
+        <permission name="com.motorola.permission.EXTRA_SCREEN_CONTROL"/>
+
+        <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME" />
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+
+        <permission name="android.permission.SYSTEM_CAMERA"/>
+        <permission name="android.permission.UPDATE_DEVICE_STATS"/>
+
+    </privapp-permissions>
+</permissions>

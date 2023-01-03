@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enable-disable-package>
+    <package-disable-enable-criteria package="de.telekom.tsc" default_action="disable">
+        <criteria action="enable" channel="dteu"/>
+        <criteria action="enable" channel="reteu" mccmnc="26201"/>
+        <criteria action="enable" channel="reteu" mccmnc="26002"/>
+        <criteria action="enable" channel="reteu" mccmnc="20416"/>
+        <criteria action="enable" channel="reteu" mccmnc="20420"/>
+        <criteria action="enable" channel="reteu" mccmnc="20201"/>
+        <criteria action="enable" channel="reteu" mccmnc="23001"/>
+        <criteria action="enable" channel="reteu" mccmnc="23203"/>
+        <criteria action="enable" channel="reteu" mccmnc="21630"/>
+        <criteria action="enable" channel="reteu" mccmnc="21901"/>
+        <criteria action="enable" channel="reteu" mccmnc="21920"/>
+        <criteria action="enable" channel="reteu" mccmnc="29702"/>
+        <criteria action="enable" channel="reteu" mccmnc="22004"/>
+        <criteria action="enable" channel="reteu" mccmnc="23102"/>
+        <criteria action="enable" channel="reteu" mccmnc="22603"/>
+        <criteria action="enable" channel="reteu" mccmnc="22606"/>
+        <criteria action="enable" channel="reteu" mccmnc="29401"/>
+        <criteria action="enable" channel="reteu" mccmnc="27601"/>
+        <criteria action="enable" channel="reteu" mccmnc="72410"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

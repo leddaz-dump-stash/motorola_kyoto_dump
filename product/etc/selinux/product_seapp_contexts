@@ -1,0 +1,4 @@
+user=_app isPrivApp=true name=com.thundercomm.ar.core domain=arcore_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true seinfo=common domain=moto_stylus_app name=com.motorola.stylus type=app_data_file levelFrom=user
+user=_app isPrivApp=true seinfo=common domain=moto_stylus_app name=com.motorola.stylus.* type=app_data_file levelFrom=user
+user=_app isPrivApp=true seinfo=common domain=moto_stylus_app name=com.motorola.stylus:* type=app_data_file levelFrom=user
